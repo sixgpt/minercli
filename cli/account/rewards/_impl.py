@@ -2,7 +2,7 @@ import requests
 import click
 from dataclasses import dataclass
 
-import cli.auth.volara as volara_auth
+import cli.auth.sixgpt as volara_auth
 from constants import SIXGPT_API
 
 
@@ -35,7 +35,7 @@ class Stats:
 
 
 def _fetch_rewards() -> Stats:
-    jwt = volara_auth.get_volara_jwt()
+    jwt = volara_auth.get_sixgpt_jwt()
     resp = requests.get(
         f"{SIXGPT_API}/v1/user/stats",
         headers={"Authorization": f"Bearer {jwt}"},

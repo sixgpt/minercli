@@ -7,7 +7,7 @@ from dataclasses import dataclass
 class SyntheticData:
     input: str
     output: str
-    context: str
+    context: T.Any
     task: str
 
     def __hash__(self) -> int:

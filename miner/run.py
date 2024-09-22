@@ -16,6 +16,7 @@ from miner.drive import write_uuid_file
 from cli.auth.openai import get_active_account, set_active_account
 from openai import OpenAI
 from miner.task import WikipediaSummarization
+import cli.auth.sixgpt as sixgpt_auth
 
 
 logger = logging.getLogger(__name__)
@@ -32,6 +33,10 @@ async def start_mining():
         if client is None:
             logger.error("OpenAI client not found. Exiting..")
             return
+    jwt = sixgpt_auth.get_sixgpt_jwt()
+    if jwt is None:
+        logger.error("Failed to get sixgpt jwt. Exiting..")
+        return
 
     task = WikipediaSummarization(client)
 
@@ -61,6 +66,7 @@ async def start_mining():
         logger.info(f"Uploaded examples buffer to {file_url}")
         logger.info("Submitting to sixgpt...")
         await volara.submit(file_url)
+        sixgpt_auth.submit_data(jwt, examples)
         logger.info("Submitted to sixgpt.")
 
 
