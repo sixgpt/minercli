@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "sixgpt-miner"
 version = "0.1.0"
-description = "Scrape tweets from the web and upload to the Volara DLP"
+description = "Synthetic data generation for the SixGPT DLP"
 authors = ["SixGPT"]
 readme = "README.md"
 package-mode = false
