@@ -35,5 +35,5 @@ export PATH=$SCRIPT_DIR/bin:$PATH
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 printf "${GREEN}### SixGPT setup successful ###${NC}\n"
-echo 'Please restart your terminal or run 'source ~/.zshrc' or 'source ~/.bashrc' to use the 'volara' command.'
-echo 'Start mining with `./bin/volara mine start`'
+echo 'Please restart your terminal or run 'source ~/.zshrc' or 'source ~/.bashrc' to use the 'sixgpt' command.'
+echo 'Start mining with `./bin/sixgpt mine start`'

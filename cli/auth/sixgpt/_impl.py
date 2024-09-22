@@ -48,7 +48,7 @@ def get_sixgpt_jwt() -> T.Optional[str]:
     try:
         jwt = _get_volara_jwt()
     except Exception as e:
-        click.echo(f"Error getting Volara JWT: {e}")
+        click.echo(f"Error getting SixGPT JWT: {e}")
         return None
     if jwt:
         if os.path.exists(TMP_SIXGPT_TOKEN):

@@ -32,7 +32,7 @@ async def write_uuid_file(data: bytes) -> str:
     if items:
         folder_id = items[0]["id"]
     else:
-        # Create volara folder if it did not exist
+        # Create sixgpt folder if it did not exist
         folder_metadata = {
             "name": APPLICATION_NAME,
             "mimeType": "application/vnd.google-apps.folder",

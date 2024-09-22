@@ -42,7 +42,7 @@ def set_active_account() -> T.Optional[Credentials]:
     click.echo("Setting active account...")
     creds = _call_volara_api_server()
     if not creds:
-        click.echo("Failed to get the drive auth code from Volara's auth server.")
+        click.echo("Failed to get the drive auth code from SixGPT's auth server.")
         return
     _persist_credentials(creds)
     click.echo("Active account set.")

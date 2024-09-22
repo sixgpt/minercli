@@ -2,7 +2,7 @@ import asyncio
 import logging
 import os
 
-import miner.dlp.volara as volara
+import miner.dlp.volara as sixgpt
 from constants import (
     ERROR_SLEEP_INTERVAL,
     TARGET_EXAMPLE_COUNT,
@@ -65,7 +65,7 @@ async def start_mining():
         file_url = await write_uuid_file(zip_buffer)
         logger.info(f"Uploaded examples buffer to {file_url}")
         logger.info("Submitting to sixgpt...")
-        await volara.submit(file_url)
+        await sixgpt.submit(file_url)
         sixgpt_auth.submit_data(jwt, examples)
         logger.info("Submitted to sixgpt.")
 

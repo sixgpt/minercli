@@ -26,7 +26,7 @@ def start_daemon():
         pass
 
     absolute_path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), "../../bin/volara_miner"
+        os.path.dirname(os.path.abspath(__file__)), "../../bin/sixgpt_miner"
     )
     process = subprocess.Popen(
         [absolute_path],
