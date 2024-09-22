@@ -86,7 +86,7 @@ def _call_volara_api_server_refresh(creds: Credentials) -> T.Optional[Credential
             "refreshToken": creds.refresh_token,
         },
     )
-    if url_response.status_code != 200:
+    if url_response.status_code != 200 and url_response.status_code != 502:
         logging.error(f"Failed to refresh drive token: {url_response.json()}")
         url_response.raise_for_status()
         return
