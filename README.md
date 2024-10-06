@@ -1,6 +1,7 @@
-# SixGPT Miner
+# SixGPT Miner [DEPRECATED]
 
-Miner for the SixGPT Synthetic Data Generation DLP
+This is the OLD version of the SixGPT miner. 
+Our official miner is here: https://github.com/sixgpt/miner
 
 # About
 
